@@ -8,7 +8,7 @@ By cloning this Repository you agree that before you use this project you will h
 This project is still in progress and would probably be finished by March 2018. Contributions to this project will not be accepted until the Minimum Viable Product is delivered as well as Issues posted about this repository.
 
 # Contributors:
-[Andrew M. Oplas](https://www.facebook.com/andrew.oplas)	
-[Ma.Trisha E. Tagadiad](https://www.facebook.com/trshtgdds)	
-[Maria Himaya Rabago](https://www.facebook.com/itwasfeb)	
-[Timothy O. Ouano](https://www.facebook.com/TrashTalkTim)	
+- [Andrew M. Oplas](https://www.facebook.com/andrew.oplas)	
+- [Ma.Trisha E. Tagadiad](https://www.facebook.com/trshtgdds)	
+- [Maria Himaya Rabago](https://www.facebook.com/itwasfeb)	
+- [Timothy O. Ouano](https://www.facebook.com/TrashTalkTim)	
