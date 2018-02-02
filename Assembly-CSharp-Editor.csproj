@@ -71,6 +71,11 @@
      <Compile Include="Assets\crosstales\RTVoice\Plugins\Editor\UpdateCheck.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\Editor\UDTEventHandlerEditor.cs" />
      <Compile Include="Assets\Scripts\JSON\Editor\JSONChecker.cs" />
+     <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
+     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
+     <None Include="Assets\Editor\Vuforia\Emulator\VuforiaEmulator.xml" />
+     <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
+     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
@@ -144,10 +149,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="RTVoice">
- <HintPath>C:/Users/Timothy/Documents/Ani/Assets/crosstales/RTVoice/Plugins/RTVoice.dll</HintPath>
+ <HintPath>C:/Users/Timothy/Documents/Repository/Ani/Assets/crosstales/RTVoice/Plugins/RTVoice.dll</HintPath>
  </Reference>
  <Reference Include="RTVoiceUWPBridge">
- <HintPath>C:/Users/Timothy/Documents/Ani/Assets/crosstales/RTVoice/Plugins/WSA/Stub/RTVoiceUWPBridge.dll</HintPath>
+ <HintPath>C:/Users/Timothy/Documents/Repository/Ani/Assets/crosstales/RTVoice/Plugins/WSA/Stub/RTVoiceUWPBridge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Timothy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

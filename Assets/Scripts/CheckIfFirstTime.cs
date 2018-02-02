@@ -15,7 +15,6 @@ public class CheckIfFirstTime : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         if (!PlayerPrefs.HasKey("isFirstTime") || PlayerPrefs.GetInt("isFirstTime") != 1)
         {
-            //Prologue that you want to use
             PlayerPrefs.SetInt("goldcoins", 100);
             SceneManager.LoadScene("TutorialSceneLanding");
         }

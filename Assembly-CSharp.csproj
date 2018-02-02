@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AddToReset.cs" />
+     <Compile Include="Assets\ARScreens\ModelAllocator.cs" />
      <Compile Include="Assets\Common\CameraSettings.cs" />
      <Compile Include="Assets\Common\FrameRateSettings.cs" />
      <Compile Include="Assets\Common\InitErrorHandler.cs" />
@@ -91,16 +93,24 @@
      <Compile Include="Assets\Scripts\AnimalDatabase.cs" />
      <Compile Include="Assets\Scripts\AniVoice.cs" />
      <Compile Include="Assets\Scripts\BlinkingText.cs" />
+     <Compile Include="Assets\Scripts\BUI\Demo\DemoMenuScript.cs" />
+     <Compile Include="Assets\Scripts\BUI\Demo\DemoScript.cs" />
+     <Compile Include="Assets\Scripts\BUI\Demo\VideoDemoScript.cs" />
+     <Compile Include="Assets\Scripts\BUI\Scripts\BoxDataCombo.cs" />
+     <Compile Include="Assets\Scripts\BUI\Scripts\BUI.cs" />
+     <Compile Include="Assets\Scripts\BUI\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\BUI\Scripts\UIBox.cs" />
+     <Compile Include="Assets\Scripts\BUI\Scripts\UIButton.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CheckIfFirstTime.cs" />
      <Compile Include="Assets\Scripts\CoinsManager.cs" />
+     <Compile Include="Assets\Scripts\DataManager.cs" />
      <Compile Include="Assets\Scripts\FoundImageObject.cs" />
      <Compile Include="Assets\Scripts\ImageToComputerVisionAPI.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\JSON\JSONObject.cs" />
      <Compile Include="Assets\Scripts\JSON\JSONTemplates.cs" />
      <Compile Include="Assets\Scripts\JSON\VectorTemplates.cs" />
-     <Compile Include="Assets\Scripts\LitJson\AddToReset.cs" />
      <Compile Include="Assets\Scripts\LitJson\IJsonWrapper.cs" />
      <Compile Include="Assets\Scripts\LitJson\JsonData.cs" />
      <Compile Include="Assets\Scripts\LitJson\JsonException.cs" />
@@ -196,10 +206,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="RTVoice">
- <HintPath>C:/Users/Timothy/Documents/Ani/Assets/crosstales/RTVoice/Plugins/RTVoice.dll</HintPath>
+ <HintPath>C:/Users/Timothy/Documents/Repository/Ani/Assets/crosstales/RTVoice/Plugins/RTVoice.dll</HintPath>
  </Reference>
  <Reference Include="RTVoiceUWPBridge">
- <HintPath>C:/Users/Timothy/Documents/Ani/Assets/crosstales/RTVoice/Plugins/WSA/Stub/RTVoiceUWPBridge.dll</HintPath>
+ <HintPath>C:/Users/Timothy/Documents/Repository/Ani/Assets/crosstales/RTVoice/Plugins/WSA/Stub/RTVoiceUWPBridge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Timothy/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

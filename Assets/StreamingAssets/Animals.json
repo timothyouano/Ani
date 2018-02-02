@@ -1,14 +1,17 @@
 [
   {
     "id": 0,
-    "name": "Lion"
+    "name": "Lion",
+    "modelpath":  "/Tiger/tiger_idle"
   },
   {
     "id": 1,
-    "name": "Panda"
+    "name": "Panda",
+    "modelpath":  ""
   },
   {
     "id": 2,
-    "name": "Cat"
+    "name": "Cat",
+    "modelpath":  "/Cat/cat"
   }
 ]

@@ -27,10 +27,10 @@ public class AnimalDatabase : MonoBehaviour {
         
         ConstructAnimalDatabase();
 
-        Debug.Log(FetchItemById(0).name);
+        Debug.Log(FetchAnimalByID(2).name);
 	}
 
-    public Animal FetchItemById(int id)
+    public Animal FetchAnimalByID(int id)
     {
         Animal animal = new Animal();
         for(int i = 0; i < database.Count; i++)
@@ -47,7 +47,7 @@ public class AnimalDatabase : MonoBehaviour {
     void ConstructAnimalDatabase() {
         for(int i = 0; i < animalData.Count; i++)
         {
-            database.Add(new Animal((int)animalData[i]["id"],animalData[i]["name"].ToString()));
+            database.Add(new Animal((int)animalData[i]["id"],animalData[i]["name"].ToString(), animalData[i]["modelpath"].ToString()));
         }
     }
 
@@ -56,16 +56,18 @@ public class AnimalDatabase : MonoBehaviour {
 public class Animal{
     public int id { get; set; }
     public string name { get; set; }
+    public string modelPath { get; set; }
     public Sprite sprite { get; set; }
 
     public Animal() {
         this.id = -1;
     }
 
-    public Animal(int id, string name)
+    public Animal(int id, string name, string modelPath)
     {
         this.id = id;
         this.name = name;
+        this.modelPath = modelPath;
         this.sprite = Resources.Load<Sprite>("Sprite/Animals/" + name);
     }
 }

@@ -44,3 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stack.unity
     guid: 14e0dc042cb99c042b6e59bf763af061
+  - enabled: 1
+    path: Assets/ARScreens/Cat.unity
+    guid: a862d5702cdcb5240b5f62a90164727b
+  - enabled: 1
+    path: Assets/RequireInternetModal.unity
+    guid: ece48cc2835fb8c4095883baf5da0bc1

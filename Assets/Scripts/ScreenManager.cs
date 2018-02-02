@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LukeWaffel.BUI;
 
 using UnityEngine.SceneManagement;
 
@@ -19,9 +20,33 @@ public class ScreenManager : MonoBehaviour {
         SceneManager.LoadScene("MainMenu");
     }
 
+    IEnumerator checkConnection()
+    {
+        string url = "https://google.com";
+        WWW www = new WWW(url);
+        yield return www;
+        if (www.isDone && www.bytesDownloaded > 0)
+        {
+            print("done");
+            SceneManager.LoadScene("Play");
+        }
+        if (www.isDone && www.bytesDownloaded == 0)
+        {
+            print("no connection");
+
+        }
+    }
+
     public void PlayButton()
     {
-        SceneManager.LoadScene("Play");
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            SceneManager.LoadScene("RequireInternetModal");
+        }
+        else
+        {
+            SceneManager.LoadScene("Play");
+        }
     }
 
     void Awake()
@@ -49,8 +74,17 @@ public class ScreenManager : MonoBehaviour {
         }
         else
         {
-            if (!menuSet)
+            if (fromTutorial)
             {
+                menuSet = false;
+                fromTutorial = false;
+            }
+            if (!menuSet && currentScene == "MainMenu")
+            {
+                GameObject.Find("Play").GetComponent<Button>().onClick.AddListener(() => {
+                    PlayButton();
+                    doneModify = false;
+                });
                 GameObject.Find("StashBtn").GetComponent<Button>().onClick.AddListener(() => {
                     SceneManager.LoadScene("Stack");
                     doneModify = false;
@@ -60,16 +94,12 @@ public class ScreenManager : MonoBehaviour {
                 });
                 menuSet = true;
             }
-            if (fromTutorial)
-            {
-                menuSet = false;
-                fromTutorial = false;
-            }
         }
         if(currentScene == "TutorialSceneLanding")
         {
             AudioSource audioSource = GetComponent<AudioSource>(); ;
             audioSource.Stop();
+            fromTutorial = true;
         }
     }
 

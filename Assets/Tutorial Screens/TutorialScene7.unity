@@ -285,7 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffSprite: {fileID: 21300000, guid: 0bfd979802beecd40940866fde319cc6, type: 3}
   OnSprite: {fileID: 21300000, guid: 97b27627eda17964ca6b39ef97af8972, type: 3}
-  SoundBtn: {fileID: 64673647}
 --- !u!114 &64673647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,6 +1032,7 @@ GameObject:
   - component: {fileID: 649647931}
   - component: {fileID: 649647930}
   - component: {fileID: 649647929}
+  - component: {fileID: 649647935}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1194,6 +1194,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649647935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649647928}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mWorldCenterMode: 3
+  mWorldCenter: {fileID: 0}
 --- !u!1 &941057464
 GameObject:
   m_ObjectHideFlags: 0
