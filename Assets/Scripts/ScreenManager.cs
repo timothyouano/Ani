@@ -63,7 +63,7 @@ public class ScreenManager : MonoBehaviour {
     void Update()
     {
         currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "Stash" && !doneModify)
+        if (currentScene == "Stack" && !doneModify)
         {
             exit = GameObject.Find("Exit").GetComponent<Button>();
             exit.onClick.AddListener(() => {

@@ -54,6 +54,8 @@ public class Inventory : MonoBehaviour {
                 slots[i].GetComponent<Button>().onClick.AddListener(() => {
                     // When Animal is clicked
                     DataManager.animalClicked = id;
+                    AudioSource bgm = GameObject.Find("SceneManager").GetComponent<AudioSource>();
+                    bgm.Stop();
                     Debug.Log(DataManager.animalClicked + " sad");
                     SceneManager.LoadScene("Cat");
                 });

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SoundButton
+  - info
+  - Information
   layers:
   - Default
   - TransparentFX

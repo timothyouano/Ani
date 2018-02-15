@@ -21,11 +21,41 @@ public class ModelAllocator : MonoBehaviour {
         model.transform.SetParent(GameObject.Find("UserDefinedTarget").transform);
         model.transform.localScale = new Vector3(0.01F,0.01F,0.01F);
         model.transform.position = Vector2.zero;
+        model.transform.rotation = new Quaternion(0,-90F,0,0);
+        model.SetActive(false);
         model.name = "Model";
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void enable()
+    {
+        model.SetActive(true);
+    }
+
+    public void disable()
+    {
+        StartCoroutine(disableIE());
+    }
+
+    public void enableInfo()
+    {
+        GameObject child;
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Information");
+        for(int i = 1; i < objects.Length; i++)
+        {
+            child = objects[i].transform.GetChild(0).gameObject;
+            child.SetActive(true);
+        }
+        //GameObject.Find("Information").GetComponent<Renderer>().enabled = false;
+    }
+
+    public IEnumerator disableIE()
+    {
+        yield return new WaitForSeconds(0.0005f);
+        model.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

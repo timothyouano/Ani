@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ImageToComputerVisionAPI : MonoBehaviour {
 
-    string VISIONKEY = "39dd295b44d842a09a3ec5368aa3564d"; // replace with your Computer Vision API Key
+    string VISIONKEY = "f477fa9f646842279aa8dbf02ec6075b"; // replace with your Computer Vision API Key
 
     string emotionURL = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/tag";
 
