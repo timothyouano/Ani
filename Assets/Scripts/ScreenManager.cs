@@ -15,11 +15,6 @@ public class ScreenManager : MonoBehaviour {
     bool doneModify = false;
     bool menuSet = false;
     public static bool fromTutorial = false;
-
-    public void returnToMenu() {
-        SceneManager.LoadScene("MainMenu");
-    }
-
     IEnumerator checkConnection()
     {
         string url = "https://google.com";
@@ -62,6 +57,7 @@ public class ScreenManager : MonoBehaviour {
 
     void Update()
     {
+        // Note: Done modify helps to not go and assign again any button after every loop of an update, not putting doneModify wil make the app lag
         currentScene = SceneManager.GetActiveScene().name;
         if (currentScene == "Stack" && !doneModify)
         {
@@ -95,12 +91,49 @@ public class ScreenManager : MonoBehaviour {
                 menuSet = true;
             }
         }
-        if(currentScene == "TutorialSceneLanding")
+        if(currentScene == "TutorialSceneLanding" && !doneModify) // Tutorial Screen
         {
             AudioSource audioSource = GetComponent<AudioSource>(); ;
             audioSource.Stop();
             fromTutorial = true;
+            doneModify = true;
         }
+        else if (currentScene == "RequireInternetModal" && !doneModify) // No Internet Screen
+        {
+            menuSet = false;
+            GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
+                returnToMenu();
+            });
+            doneModify = true;
+        }
+        else if (currentScene == "Play" && !doneModify) // Play Screen
+        {
+            menuSet = false;
+            GameObject.Find("BackButton").GetComponent<Button>().onClick.AddListener(() => {
+                returnToMenu();
+            });
+            doneModify = true;
+        }
+        else if (currentScene == "FoundNewAnimal" && !doneModify)
+        {
+            menuSet = false;
+            GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
+                SceneManager.LoadScene("Stack");
+            });
+            doneModify = true;
+        }
+
+        // If back button on android is pressed then go back to Main Menu
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            menuSet = false;
+            GameObject.Find("Image").GetComponent<CameraController>().Exit();
+            returnToMenu();
+        }
+    }
+
+    public void setModify(bool val)
+    {
+        this.doneModify = val;
     }
 
     public void tapSound()
@@ -108,4 +141,8 @@ public class ScreenManager : MonoBehaviour {
         tapSounds.Play();
     }
 
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

@@ -115,6 +115,11 @@ public class CameraController : MonoBehaviour {
         StartCoroutine(TakePhoto());
     }
 
+    public void Exit()
+    {
+        activeCameraTexture.Stop();
+    }
+
     IEnumerator TakePhoto()
     {
         // NOTE - you almost certainly have to do this here:

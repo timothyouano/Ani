@@ -44,6 +44,20 @@ public class AnimalDatabase : MonoBehaviour {
         return animal;
     }
 
+    public Animal FetchAnimalByName(string name)
+    {
+        Animal animal = null;
+        for (int i = 0; i < database.Count; i++)
+        {
+            if (name.Equals(database[i].name.ToLower()))
+            {
+                animal = database[i];
+                break;
+            }
+        }
+        return animal;
+    }
+
     void ConstructAnimalDatabase() {
         for(int i = 0; i < animalData.Count; i++)
         {

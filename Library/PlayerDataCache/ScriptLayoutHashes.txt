@@ -15,6 +15,7 @@ Assets/Play.unity
 Assets/Stack.unity
 Assets/ARScreens/Cat.unity
 Assets/RequireInternetModal.unity
+Assets/FoundNewAnimal.unity
 SceneListEnd?
 5eb721946691e8ce6149678f86a20954 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Dialog
 df74704e4f42390de395067a89ea5fad Assembly-CSharp.dll:.CameraController
@@ -33,6 +34,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 5eb09977a6503450183b4e223250a7de Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SequenceCaller
 6aa15709f0c2d1158b12c889abbf4b5f Assembly-CSharp.dll:.ScreenManager
+25a8032d233df72c368030798802d97d Assembly-CSharp.dll:.ExtrudeRandomEdges
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -100,6 +102,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+9008bdf459020f5356e69af2650f275e Assembly-CSharp.dll:ProBuilder2.Examples.IcoBumpin
 678ce702e7df519bfdc1d0e999dedc69 Assembly-CSharp.dll:.Inventory
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DemoScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -217,8 +220,10 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 a65f0b968f5e0d67e5c2dcd47e4f5d8d Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SimpleNative
+3a78908c16a966e9279d1d40c70e9861 Assembly-CSharp.dll:.DefaultTrackableEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CheckIfFirstTime
 c63cbfad611b5987ceed6e39f26991bd Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.MaterialChanger
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ProBuilder2.Examples.HueCube
 e14d4c608110b42cb49ce7c927054598 Assembly-CSharp.dll:.ShowImageOnPanel
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ImageToComputerVisionAPI
 a7a85e3660316548e6df72942099a49d Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.NativeDisabler
@@ -230,6 +235,17 @@ c70b17dda2d4b966f689f5aab4655905 Assembly-CSharp.dll:.UDTEventHandler
 3934ca8022d4c1e2d3df62eb846732fb Assembly-CSharp.dll:.MenuAnimator
 fc885483ac0db34f5efb02d965d53cb2 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomScaler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MenuOptions
+a13e348db57cdb225ef648cd7f959981 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_BezierShape
+d65f8e166eb4df1e46eb9eaa8ee261c1 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_ColorPalette
+05524b8f659e7bfe5756d1335fec24ba ProBuilderCore-Unity5.dll:.pb_DummyScript
+de97379821afa9e2d0bd6e6ccee7b4a7 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_ElementGraphics
+d05d1726290c11f0086c3ed9a61ae76d ProBuilderCore-Unity5.dll:.pb_Entity
+08d320ebcef1851d2d5edc2e728a92ee ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_LineRenderer
+05524b8f659e7bfe5756d1335fec24ba ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_MeshRenderer
+2bc8bffa442d471f63726d9d95ec3942 ProBuilderCore-Unity5.dll:.pb_Object
+be298e9989a57b3144bbdecf37b84436 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_PolyShape
+8965b639c314e17576abd37f3ff28cd2 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_PreferenceDictionary
+b6994eef3ccb7ef36dbcb0ded4de4503 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_Renderable
 0c506b1eafd86dfc3b9c95d1123f09f5 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.NativeAudio
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -256,6 +272,7 @@ a2c7f8b593001c5dea9a482b721869e4 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Ani
 22b1c9e3760ce0520da21ce2ca684142 Assembly-CSharp.dll:.InitErrorHandler
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+82c6192ece8decc1abce9eae5bc44e95 Assembly-CSharp.dll:.HighlightNearestFace
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AboutScreen
 ef65d26835ccbdcda7e45d9fae1a52a0 Assembly-CSharp.dll:.FrameQualityMeter
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -267,6 +284,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 583bbde4025ee38b38121c707145fa87 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIMultiAudioFilter
 1f9c77b4de624943d85ebe0b45c9058b Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomRotator
 fcb764e9d8567daa2c8ced5bdeb8dc5a Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.AudioVisualizer
+420d73cb5979b4d126f3c0d301bcca59 Assembly-CSharp.dll:ProBuilder2.Examples.CameraControls
 3d8da2495baad8ccd514c74e38df4503 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SendMessage
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 50b3ff15baa652f0bb07d578157f1c13 Assembly-CSharp.dll:.MuteBtn
@@ -314,6 +332,7 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FrameRateSettings
+32dcc1dca94294515dfea07e896e1a84 Assembly-CSharp.dll:ProBuilder2.Examples.RuntimeEdit
 31bf9dd839d49e024ccceb69e3bfc6bb RTVoice.dll:Crosstales.RTVoice.Tool.InternetCheck
 05524b8f659e7bfe5756d1335fec24ba RTVoice.dll:Crosstales.RTVoice.LiveSpeaker
 bfd7f734f1da071e7ff624d551bc829b RTVoice.dll:Crosstales.RTVoice.Tool.Loudspeaker
@@ -359,21 +378,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-3a78908c16a966e9279d1d40c70e9861 Assembly-CSharp.dll:.DefaultTrackableEventHandler
-a13e348db57cdb225ef648cd7f959981 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_BezierShape
-05524b8f659e7bfe5756d1335fec24ba ProBuilderCore-Unity5.dll:.pb_DummyScript
-de97379821afa9e2d0bd6e6ccee7b4a7 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_ElementGraphics
-d05d1726290c11f0086c3ed9a61ae76d ProBuilderCore-Unity5.dll:.pb_Entity
-08d320ebcef1851d2d5edc2e728a92ee ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_LineRenderer
-05524b8f659e7bfe5756d1335fec24ba ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_MeshRenderer
-2bc8bffa442d471f63726d9d95ec3942 ProBuilderCore-Unity5.dll:.pb_Object
-be298e9989a57b3144bbdecf37b84436 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_PolyShape
-8965b639c314e17576abd37f3ff28cd2 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_PreferenceDictionary
-d65f8e166eb4df1e46eb9eaa8ee261c1 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_ColorPalette
-b6994eef3ccb7ef36dbcb0ded4de4503 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_Renderable
-82c6192ece8decc1abce9eae5bc44e95 Assembly-CSharp.dll:.HighlightNearestFace
-420d73cb5979b4d126f3c0d301bcca59 Assembly-CSharp.dll:ProBuilder2.Examples.CameraControls
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ProBuilder2.Examples.HueCube
-25a8032d233df72c368030798802d97d Assembly-CSharp.dll:.ExtrudeRandomEdges
-9008bdf459020f5356e69af2650f275e Assembly-CSharp.dll:ProBuilder2.Examples.IcoBumpin
-32dcc1dca94294515dfea07e896e1a84 Assembly-CSharp.dll:ProBuilder2.Examples.RuntimeEdit
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.IconAllocator

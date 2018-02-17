@@ -13,7 +13,6 @@ public class ModelAllocator : MonoBehaviour {
         database = GetComponent<AnimalDatabase>();
         // Get previous clicked animal ID
         Animal animal = database.FetchAnimalByID(DataManager.animalClicked);
-        Debug.Log(DataManager.animalClicked + " sadasda");
 
         // Instantiate model for previously clicked animal
         Debug.Log(animal.id);

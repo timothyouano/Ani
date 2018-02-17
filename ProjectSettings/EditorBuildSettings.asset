@@ -50,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RequireInternetModal.unity
     guid: ece48cc2835fb8c4095883baf5da0bc1
+  - enabled: 1
+    path: Assets/FoundNewAnimal.unity
+    guid: 3e2ad5af4c1363e40be146174e8c2e96
