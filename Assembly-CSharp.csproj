@@ -109,6 +109,7 @@
      <Compile Include="Assets\Scripts\BUI\Scripts\UIBox.cs" />
      <Compile Include="Assets\Scripts\BUI\Scripts\UIButton.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CameraFocusController.cs" />
      <Compile Include="Assets\Scripts\CheckIfFirstTime.cs" />
      <Compile Include="Assets\Scripts\CoinsManager.cs" />
      <Compile Include="Assets\Scripts\DataManager.cs" />
