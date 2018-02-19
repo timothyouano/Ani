@@ -6,40 +6,40 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/Screens/MainMenu.unity
     guid: 5b91fa60ea4a0d34794a61377909966e
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene1.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene1.unity
     guid: 9f3232080ac2e984a96ec96679cb9498
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene2.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene2.unity
     guid: 56fd743062a3f73418838233b5ce79cc
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene3.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene3.unity
     guid: 670531e90ee630b47a4def70d960abd1
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene4.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene4.unity
     guid: e983b7805caafca4e93964c624891451
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene5.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene5.unity
     guid: d01ee3f00b621744e9fe527ba97de0c6
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene6.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene6.unity
     guid: d1e1e513993837c49993313be6d8f754
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene7.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene7.unity
     guid: 153e4e6457101fc4ea01358911525505
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialSceneLanding.unity
+    path: Assets/Screens/Tutorial Screens/TutorialSceneLanding.unity
     guid: dbd40f5355bd4074086e51b23fac4c70
   - enabled: 1
-    path: Assets/Tutorial Screens/TutorialScene8.unity
+    path: Assets/Screens/Tutorial Screens/TutorialScene8.unity
     guid: d69690a01fd006a449cd2a4fc9aabdad
   - enabled: 1
-    path: Assets/Stash.unity
+    path: Assets/Screens/Stash.unity
     guid: a8951a1770abde64eb8183c4bd7e4bbb
   - enabled: 1
-    path: Assets/Play.unity
+    path: Assets/Screens/Play.unity
     guid: 6873358a98d463a448d925780cc5246d
   - enabled: 1
     path: Assets/Stack.unity
@@ -48,8 +48,11 @@ EditorBuildSettings:
     path: Assets/ARScreens/Cat.unity
     guid: a862d5702cdcb5240b5f62a90164727b
   - enabled: 1
-    path: Assets/RequireInternetModal.unity
+    path: Assets/Screens/RequireInternetModal.unity
     guid: ece48cc2835fb8c4095883baf5da0bc1
   - enabled: 1
-    path: Assets/FoundNewAnimal.unity
+    path: Assets/Screens/FoundNewAnimal.unity
     guid: 3e2ad5af4c1363e40be146174e8c2e96
+  - enabled: 1
+    path: Assets/Screens/ARScreen.unity
+    guid: 8c9f0b8f9f8f2fc449e9b40eb0b00552

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ARScreens/Cat.unity
+- path: Assets/Screens/ARScreen.unity
   isLoaded: 1
   isActive: 1

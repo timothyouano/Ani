@@ -69,6 +69,11 @@ namespace Crosstales.RTVoice.Demo
             uidSpeakerB = Speaker.SpeakNative(TextSpeakerB.text, Speaker.VoiceForCulture("en"), RateSpeakerB);
         }
 
+        public void Speak(string text)
+        {
+            uidSpeakerB = Speaker.SpeakNative(text, Speaker.VoiceForCulture("en"), RateSpeakerB);
+        }
+
 
         public void Silence()
         {

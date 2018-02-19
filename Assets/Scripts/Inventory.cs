@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour {
                     AudioSource bgm = GameObject.Find("SceneManager").GetComponent<AudioSource>();
                     bgm.Stop();
                     Debug.Log(DataManager.animalClicked + " sad");
-                    SceneManager.LoadScene("Cat");
+                    SceneManager.LoadScene("ARScreen");
                 });
                 animalObj.transform.position = Vector2.zero;
                 animalObj.GetComponent<Image>().sprite = animalToAdd.sprite;

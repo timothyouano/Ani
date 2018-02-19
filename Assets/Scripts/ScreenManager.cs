@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using LukeWaffel.BUI;
 
 using UnityEngine.SceneManagement;
 
@@ -59,7 +58,7 @@ public class ScreenManager : MonoBehaviour {
     {
         // Note: Done modify helps to not go and assign again any button after every loop of an update, not putting doneModify wil make the app lag
         currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "Stack" && !doneModify)
+        if (currentScene == "Stash" && !doneModify)
         {
             exit = GameObject.Find("Exit").GetComponent<Button>();
             exit.onClick.AddListener(() => {
@@ -82,7 +81,7 @@ public class ScreenManager : MonoBehaviour {
                     doneModify = false;
                 });
                 GameObject.Find("StashBtn").GetComponent<Button>().onClick.AddListener(() => {
-                    SceneManager.LoadScene("Stack");
+                    SceneManager.LoadScene("Stash");
                     doneModify = false;
                 });
                 GameObject.Find("SoundBtn").GetComponent<Button>().onClick.AddListener(() => {
@@ -118,7 +117,7 @@ public class ScreenManager : MonoBehaviour {
         {
             menuSet = false;
             GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
-                SceneManager.LoadScene("Stack");
+                SceneManager.LoadScene("Stash");
             });
             doneModify = true;
         }
@@ -126,7 +125,10 @@ public class ScreenManager : MonoBehaviour {
         // If back button on android is pressed then go back to Main Menu
         if (Input.GetKeyDown(KeyCode.Escape)){
             menuSet = false;
-            GameObject.Find("Image").GetComponent<CameraController>().Exit();
+            if (currentScene == "Play")
+            {
+                GameObject.Find("Image").GetComponent<CameraController>().Exit();
+            }
             returnToMenu();
         }
     }
