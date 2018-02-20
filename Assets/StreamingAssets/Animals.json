@@ -2,16 +2,26 @@
   {
     "id": 0,
     "name": "Lion",
-    "modelpath":  "/Tiger/tiger_idle"
+    "modelpath": "/Tiger/tiger_idle",
+    "info1": "This is a sample info by one",
+    "info2": "This is a sample info by two",
+    "info3":  "This is a sample info by three"
   },
   {
     "id": 1,
     "name": "Panda",
-    "modelpath":  ""
+    "modelpath": "",
+    
+    "info1": "This is a sample info by one",
+    "info2": "This is a sample info by two",
+    "info3":  "This is a sample info by three"
   },
   {
     "id": 2,
     "name": "Cat",
-    "modelpath":  "/Cat/cat"
+    "modelpath": "/Cat/cat",
+    "info1": "This is a sample info by one",
+    "info2": "This is a sample info by two",
+    "info3":  "This is a sample info by three"
   }
 ]

@@ -61,7 +61,7 @@ public class AnimalDatabase : MonoBehaviour {
     void ConstructAnimalDatabase() {
         for(int i = 0; i < animalData.Count; i++)
         {
-            database.Add(new Animal((int)animalData[i]["id"],animalData[i]["name"].ToString(), animalData[i]["modelpath"].ToString()));
+            database.Add(new Animal((int)animalData[i]["id"],animalData[i]["name"].ToString(), animalData[i]["modelpath"].ToString(), animalData[i]["info1"].ToString(), animalData[i]["info2"].ToString(), animalData[i]["info3"].ToString()));
         }
     }
 
@@ -72,12 +72,15 @@ public class Animal{
     public string name { get; set; }
     public string modelPath { get; set; }
     public Sprite sprite { get; set; }
+    public string info1 { get; set; }
+    public string info2 { get; set; }
+    public string info3 { get; set; }
 
     public Animal() {
         this.id = -1;
     }
 
-    public Animal(int id, string name, string modelPath)
+    public Animal(int id, string name, string modelPath, string info1, string info2, string info3)
     {
         this.id = id;
         this.name = name;

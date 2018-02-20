@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,6 @@ GameObject:
   - component: {fileID: 965918150}
   - component: {fileID: 965918149}
   - component: {fileID: 965918147}
-  - component: {fileID: 965918148}
   m_Layer: 0
   m_Name: _Scene
   m_TagString: Untagged
@@ -1277,19 +1276,6 @@ MonoBehaviour:
   TextSpeakerB: {fileID: 1854415575}
   RateSpeakerB: 0.7
   PlayOnStart: 1
---- !u!114 &965918148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 965918146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2ddb05ec99c0704a9931b012013e08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreviousScene: 02-Dialog
-  NextScene: 04-Simple
 --- !u!114 &965918149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1474,7 @@ GameObject:
   - component: {fileID: 1103369696}
   - component: {fileID: 1103369695}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Info1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,7 +2347,7 @@ GameObject:
   - component: {fileID: 1584153150}
   - component: {fileID: 1584153149}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Info2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,7 +3087,7 @@ GameObject:
   - component: {fileID: 1858849864}
   - component: {fileID: 1858849863}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Info3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3688,7 +3674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1edca6fddf7b742bc41dba686bcd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TheCanvas: {fileID: 1103369694}
+  TheCanvas: {fileID: 1833552848}
 --- !u!4 &2135730926
 Transform:
   m_ObjectHideFlags: 0

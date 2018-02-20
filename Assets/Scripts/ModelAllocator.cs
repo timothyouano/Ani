@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ModelAllocator : MonoBehaviour {
 
     int passedAnimalID;
     GameObject model;
     AnimalDatabase database;
+
+    Crosstales.RTVoice.Demo.AniVoice _scene;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +26,21 @@ public class ModelAllocator : MonoBehaviour {
         model.transform.rotation = new Quaternion(0,-90F,0,0);
         model.SetActive(false);
         model.name = "Model";
+
+        // Add button informations for previously clicked animal
+        _scene = GameObject.Find("_scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>();
+
+        GameObject.Find("Info1").GetComponent<Button>().onClick.AddListener(() => {
+            _scene.Speak(animal.info1);
+        });
+
+        GameObject.Find("Info2").GetComponent<Button>().onClick.AddListener(() => {
+            _scene.Speak(animal.info2);
+        });
+
+        GameObject.Find("Info3").GetComponent<Button>().onClick.AddListener(() => {
+            _scene.Speak(animal.info3);
+        });
     }
 
     public void enable()
