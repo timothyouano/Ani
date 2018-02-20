@@ -1,10 +1,10 @@
 # Ani
 Ani short for Animal Index, an AR E-Learning for ages 6-11 years old which focuses on animals. This project is created using Unity and runs on Android Devices version 4.1 and up. This project uses [Unity Android Microsoft Vision Api Demo](https://github.com/timokranz/Unity-Android-Microsoft-Vision-Api-Demo) which is one of the repositories in this account(timokranz).
 
-![Tutorial Screen](ScreenShots/1.png)
-![Reward Screen](ScreenShots/2.png)
-![Splash Screen](ScreenShots/3.png)
-![Menu Screen](ScreenShots/4.png)
+![Tutorial Screen](ScreenShots/1.pn | width=100g)
+![Reward Screen](ScreenShots/2.png | width=100)
+![Splash Screen](ScreenShots/3.png | width=100)
+![Menu Screen](ScreenShots/4.png | width=100)
 
 # License
 By cloning this Repository you agree that before you use this project you will have to email one of the developers for permission to use it personally or for educational purposes. Using this project for commercial will grant the contributors to earn a part of the money earned by those who are using this project. You are not to distribute this project without the permission of the contributors, anyone who refuses to follow this shall be reported immediately to the authorities.
