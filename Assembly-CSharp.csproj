@@ -115,6 +115,7 @@
      <Compile Include="Assets\Scripts\LitJson\Lexer.cs" />
      <Compile Include="Assets\Scripts\LitJson\Netstandard15Polyfill.cs" />
      <Compile Include="Assets\Scripts\LitJson\ParserToken.cs" />
+     <Compile Include="Assets\Scripts\LoadingCircle.cs" />
      <Compile Include="Assets\Scripts\ModelAllocator.cs" />
      <Compile Include="Assets\Scripts\MuteBtn.cs" />
      <Compile Include="Assets\Scripts\ParseComputerVisionResponse.cs" />

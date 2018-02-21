@@ -41,11 +41,11 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
     IEnumerator GetVisionDataFromImages(byte[] bytes)
     {
         #if UNITY_WINRT
-                byte[] bytes = UnityEngine.Windows.File.ReadAllBytes(fileName);
+                        byte[] bytes = UnityEngine.Windows.File.ReadAllBytes(fileName);
         #else
-        //WWW reader = new WWW(fileName);
-        //while (!reader.isDone) { }
-        //byte[] bytes = reader.bytes;
+                //WWW reader = new WWW(fileName);
+                //while (!reader.isDone) { }
+                //byte[] bytes = reader.bytes;
         #endif
 
         var headers = new Dictionary<string, string>() {
@@ -60,8 +60,6 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
         FoundImageObject c = GetComponent<ParseComputerVisionResponse>().ParseJSONData(responseData);
 
         processImage(c);
-        
-        
     }
 
     public void processImage(FoundImageObject c)

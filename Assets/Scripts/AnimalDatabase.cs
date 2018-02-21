@@ -86,5 +86,8 @@ public class Animal{
         this.name = name;
         this.modelPath = modelPath;
         this.sprite = Resources.Load<Sprite>("Sprite/Animals/" + name);
+        this.info1 = info1;
+        this.info2 = info2;
+        this.info3 = info3;
     }
 }

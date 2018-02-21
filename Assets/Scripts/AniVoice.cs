@@ -23,6 +23,8 @@ namespace Crosstales.RTVoice.Demo
 
         private string textB;
 
+        public string valueSpeak { get; set; }
+
         #endregion
 
 
@@ -69,9 +71,9 @@ namespace Crosstales.RTVoice.Demo
             uidSpeakerB = Speaker.SpeakNative(TextSpeakerB.text, Speaker.VoiceForCulture("en"), RateSpeakerB);
         }
 
-        public void Speak(string text)
+        public void Speak()
         {
-            uidSpeakerB = Speaker.SpeakNative(text, Speaker.VoiceForCulture("en"), RateSpeakerB);
+            uidSpeakerB = Speaker.SpeakNative(valueSpeak, Speaker.VoiceForCulture("en"), RateSpeakerB);
         }
 
 

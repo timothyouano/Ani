@@ -13,6 +13,8 @@ public class FoundImageObject
     public List<Category> categories { get; private set; }
     public Text txt = GameObject.Find("Result").GetComponent<Text>();
 
+    private GameObject loading = GameObject.Find("Loading");
+
     public FoundImageObject(JSONObject cat)
     {
         categories = ConvertScoresToCategoryDictionary(cat);
@@ -53,6 +55,7 @@ public class FoundImageObject
         }
         Debug.Log("Most Recognized Category: " + max.ToString());
         txt.text = max.ToString();
+        loading.SetActive(false);
         return max;
     }
 }

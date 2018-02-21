@@ -8,6 +8,12 @@ public class ModelAllocator : MonoBehaviour {
     int passedAnimalID;
     GameObject model;
     AnimalDatabase database;
+    Animal animal;
+
+    public GameObject scene;
+    public GameObject info1;
+    public GameObject info2;
+    public GameObject info3;
 
     Crosstales.RTVoice.Demo.AniVoice _scene;
 
@@ -15,7 +21,7 @@ public class ModelAllocator : MonoBehaviour {
     void Start () {
         database = GetComponent<AnimalDatabase>();
         // Get previous clicked animal ID
-        Animal animal = database.FetchAnimalByID(DataManager.animalClicked);
+        animal = database.FetchAnimalByID(DataManager.animalClicked);
 
         // Instantiate model for previously clicked animal
         Debug.Log(animal.id);
@@ -27,19 +33,33 @@ public class ModelAllocator : MonoBehaviour {
         model.SetActive(false);
         model.name = "Model";
 
+        Debug.Log("Animal info " + animal.info1 + " Animal ID" + animal.id);
+    }
+
+    public void activateInfoSpeak()
+    {
         // Add button informations for previously clicked animal
-        _scene = GameObject.Find("_scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>();
+        _scene = scene.GetComponent<Crosstales.RTVoice.Demo.AniVoice>();
 
-        GameObject.Find("Info1").GetComponent<Button>().onClick.AddListener(() => {
-            _scene.Speak(animal.info1);
+        info1.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
+        info2.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
+        info3.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
+
+        Debug.Log("ANIMAL NAME " + animal.name);
+
+        info1.GetComponent<Button>().onClick.AddListener(() => {
+            _scene.valueSpeak = animal.info1;
+            _scene.Speak();
         });
 
-        GameObject.Find("Info2").GetComponent<Button>().onClick.AddListener(() => {
-            _scene.Speak(animal.info2);
+       info2.GetComponent<Button>().onClick.AddListener(() => {
+            _scene.valueSpeak = animal.info2;
+            _scene.Speak();
         });
 
-        GameObject.Find("Info3").GetComponent<Button>().onClick.AddListener(() => {
-            _scene.Speak(animal.info3);
+       info3.GetComponent<Button>().onClick.AddListener(() => {
+            _scene.valueSpeak = animal.info3;
+            _scene.Speak();
         });
     }
 
