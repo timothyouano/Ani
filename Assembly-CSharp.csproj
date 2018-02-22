@@ -85,6 +85,7 @@
      <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\RandomRotator.cs" />
      <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\RandomScaler.cs" />
      <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\ScrollRectHandler.cs" />
+     <Compile Include="Assets\Follow.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\FrameQualityMeter.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\QualityDialog.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\UDTEventHandler.cs" />
@@ -125,6 +126,9 @@
      <Compile Include="Assets\Scripts\ShowImageOnPanel.cs" />
      <Compile Include="Assets\Scripts\TutorialPager.cs" />
      <Compile Include="Assets\Scripts\TutorialScreenSoundCheck.cs" />
+     <Compile Include="Assets\sync.cs" />
+     <Compile Include="Assets\Test.cs" />
+     <Compile Include="Assets\Test2.cs" />
      <None Include="Assets\Scripts\JSON\readme.txt" />
      <None Include="Assets\crosstales\RTVoice\README.txt" />
      <None Include="Assets\crosstales\RTVoice\3rd party\Assets.txt" />

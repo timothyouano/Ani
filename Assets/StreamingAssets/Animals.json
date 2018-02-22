@@ -3,6 +3,7 @@
     "id": 0,
     "name": "Lion",
     "modelpath": "/Tiger/tiger_idle",
+    "introduction": "",
     "info1": "This is a sample info by one",
     "info2": "This is a sample info by two",
     "info3":  "This is a sample info by three"
@@ -11,6 +12,7 @@
     "id": 1,
     "name": "Panda",
     "modelpath": "",
+    "introduction": "",
     "info1": "This is a sample info by one",
     "info2": "This is a sample info by two",
     "info3":  "This is a sample info by three"
@@ -19,7 +21,8 @@
     "id": 2,
     "name": "Cat",
     "modelpath": "/Cat/cat",
-    "info1": "This is a sample info by one",
+    "introduction": "Cats are one of the most popular pets of the world. They can sleep 13-14 hours a day. They can jump approximately seven times their height. They have powerful night vision. They also have excellent hearing and powerful sense of smell. Cats tongue contains small hooks which they can use to lick themselves to make it clean. A cat has 230 bones, even more than a human.",
+    "info1": "Cats can’t see in total darkness, but they see well in very low light. They aren’t completely colorblind, but their color vision is limited.",
     "info2": "This is a sample info by two",
     "info3":  "This is a sample info by three"
   }

@@ -22,6 +22,7 @@ public class ModelAllocator : MonoBehaviour {
         database = GetComponent<AnimalDatabase>();
         // Get previous clicked animal ID
         animal = database.FetchAnimalByID(DataManager.animalClicked);
+        _scene = scene.GetComponent<Crosstales.RTVoice.Demo.AniVoice>();
 
         // Instantiate model for previously clicked animal
         Debug.Log(animal.id);
@@ -36,10 +37,15 @@ public class ModelAllocator : MonoBehaviour {
         Debug.Log("Animal info " + animal.info1 + " Animal ID" + animal.id);
     }
 
+    public void speakIntro()
+    {
+        _scene.valueSpeak = animal.intro;
+        _scene.Speak();
+    }
+
     public void activateInfoSpeak()
     {
         // Add button informations for previously clicked animal
-        _scene = scene.GetComponent<Crosstales.RTVoice.Demo.AniVoice>();
 
         info1.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
         info2.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
