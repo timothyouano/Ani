@@ -278,7 +278,7 @@ da94b08a88eaf777635fd5010f2d29b5 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Pre
 f660aaf65f58d1902fa8946d3661a010 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIAudioFilter
 94c023ae6a3a715a380b0f81ff9db15f Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.FFTAnalyzer
 728e834925daefb3da27ee6aa844a671 Assembly-CSharp.dll:.ScaleImageOvertime
-b7eda88e790987cd96819de0ce0764d6 Assembly-CSharp.dll:.Test
+1d6ba05e9f65a10f2afb5cc352f5f06b Assembly-CSharp.dll:.Test
 7b419e6f4f9e4c87f741e073e6fe5562 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIScenes
 55236d2ef995afe53d7b4cdf2d4c4352 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUISpeech
 3d05e921de5fdf58ebcc998827076153 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.PlatformEnabler
@@ -363,3 +363,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Test2
+1d6ba05e9f65a10f2afb5cc352f5f06b Assembly-CSharp.dll:.ZoomParts

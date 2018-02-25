@@ -129,6 +129,7 @@
      <Compile Include="Assets\sync.cs" />
      <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\Test2.cs" />
+     <Compile Include="Assets\ZoomParts.cs" />
      <None Include="Assets\Scripts\JSON\readme.txt" />
      <None Include="Assets\crosstales\RTVoice\README.txt" />
      <None Include="Assets\crosstales\RTVoice\3rd party\Assets.txt" />

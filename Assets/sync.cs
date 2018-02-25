@@ -8,6 +8,8 @@ public class sync : MonoBehaviour {
     public Camera uiCamera;
     public Camera arCamera;
 
+    bool duplicated = false;
+
     // Use this for initialization
     void Start () {
 		
@@ -31,6 +33,11 @@ public class sync : MonoBehaviour {
         this.synch = true;
     }
 
+    public bool isDuplicated()
+    {
+        return duplicated;
+    }
+
     public void duplicateModel()
     {
         GameObject duplicate;
@@ -42,6 +49,11 @@ public class sync : MonoBehaviour {
         duplicate.transform.position = model.transform.position;
         duplicate.transform.rotation = model.transform.rotation;
         duplicate.name = "Model-duplicate";
+
+        //Destroy(GameObject.Find("UserDefinedTarget-1"));
+        GameObject.Find("UserDefinedTarget-1").SetActive(false);
+
+        duplicated = true;
 
         //StartCoroutine(move(duplicate));
     }
