@@ -15,6 +15,11 @@ public class ModelAllocator : MonoBehaviour {
     public GameObject info2;
     public GameObject info3;
 
+    GameObject infoPanel;
+    GameObject imagePanel;
+
+    bool qualityMeterHidden = false;
+
     Crosstales.RTVoice.Demo.AniVoice _scene;
 
     // Use this for initialization
@@ -34,7 +39,8 @@ public class ModelAllocator : MonoBehaviour {
         model.SetActive(false);
         model.name = "Model";
 
-        Debug.Log("Animal info " + animal.info1 + " Animal ID" + animal.id);
+        infoPanel = GameObject.Find("TargetBuilderCanvas").transform.GetChild(5).gameObject;
+        imagePanel = GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject;
     }
 
     public void speakIntro()
@@ -48,7 +54,7 @@ public class ModelAllocator : MonoBehaviour {
         // Add button informations for previously clicked animal
 
         info1.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
-        info2.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/1");
+        info2.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/2");
         info3.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoButton/" + animal.name + "/3");
 
         Debug.Log("ANIMAL NAME " + animal.name);
@@ -56,6 +62,28 @@ public class ModelAllocator : MonoBehaviour {
         info1.GetComponent<Button>().onClick.AddListener(() => {
             _scene.valueSpeak = animal.info1;
             _scene.Speak();
+            GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
+            GameObject.Find("ARCamera").GetComponent<Camera>().enabled = false;
+            sync Synch = GameObject.Find("Synch").GetComponent<sync>();
+            if (!Synch.isDuplicated())
+            {
+                Synch.duplicateModel();
+                Synch.offSync();
+            }
+
+            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart1();
+
+            if (!qualityMeterHidden)
+            {
+                GameObject.Find("QualityMeter").SetActive(false);
+                qualityMeterHidden = true;
+            }
+            
+            infoPanel.gameObject.SetActive(true);
+            infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info1;
+
+            imagePanel.SetActive(true);
+            imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/1");
         });
 
        info2.GetComponent<Button>().onClick.AddListener(() => {
@@ -71,6 +99,19 @@ public class ModelAllocator : MonoBehaviour {
            }
            
            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart2();
+           GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
+
+           if (!qualityMeterHidden)
+           {
+               GameObject.Find("QualityMeter").SetActive(false);
+               qualityMeterHidden = true;
+           }
+
+           infoPanel.gameObject.SetActive(true);
+           infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info2;
+
+           imagePanel.SetActive(true);
+           imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/2");
        });
 
        info3.GetComponent<Button>().onClick.AddListener(() => {
@@ -86,6 +127,19 @@ public class ModelAllocator : MonoBehaviour {
            }
            
            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart3();
+           GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
+
+           if (!qualityMeterHidden)
+           {
+               GameObject.Find("QualityMeter").SetActive(false);
+               qualityMeterHidden = true;
+           }
+
+           infoPanel.gameObject.SetActive(true);
+           infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info3;
+
+           imagePanel.SetActive(true);
+           imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/3");
 
        });
     }
