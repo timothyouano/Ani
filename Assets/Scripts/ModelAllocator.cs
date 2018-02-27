@@ -144,6 +144,12 @@ public class ModelAllocator : MonoBehaviour {
        });
     }
 
+    public void hideSidePanels()
+    {
+        imagePanel.SetActive(false);
+        infoPanel.SetActive(false);
+    }
+
     public void enable()
     {
         model.SetActive(true);

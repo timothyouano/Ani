@@ -168,6 +168,11 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
 
             // generate a new target:
             m_TargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
+
+            // Disable creating new target
+            GameObject.Find("BuildPanel").SetActive(false);
+            GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().activateInfoSpeak();
+            GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().speakIntro();
         }
         else
         {

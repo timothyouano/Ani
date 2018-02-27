@@ -10,6 +10,9 @@ public class sync : MonoBehaviour {
 
     bool duplicated = false;
 
+    GameObject ARModel;
+    GameObject duplicate;
+
     // Use this for initialization
     void Start () {
 		
@@ -33,6 +36,11 @@ public class sync : MonoBehaviour {
         this.synch = true;
     }
 
+    public void onSync()
+    {
+        this.synch = false;
+    }
+
     public bool isDuplicated()
     {
         return duplicated;
@@ -40,7 +48,6 @@ public class sync : MonoBehaviour {
 
     public void duplicateModel()
     {
-        GameObject duplicate;
         GameObject model = GameObject.Find("UserDefinedTarget-1").transform.GetChild(1).gameObject;
 
         duplicate = Instantiate(model);
@@ -51,11 +58,34 @@ public class sync : MonoBehaviour {
         duplicate.name = "Model-duplicate";
 
         //Destroy(GameObject.Find("UserDefinedTarget-1"));
-        GameObject.Find("UserDefinedTarget-1").SetActive(false);
+        ARModel = GameObject.Find("UserDefinedTarget-1");
+        ARModel.transform.localScale = new Vector3(0.0001f, 0.0001f, 0.0001f);
 
         duplicated = true;
 
         //StartCoroutine(move(duplicate));
+    }
+
+    public void activateARModel()
+    {
+        duplicated = false;
+        gameObject.GetComponent<ZoomParts>().BackToAR();
+        // Hide all side panels
+        GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().hideSidePanels();
+    }
+
+    public void EnableARModel()
+    {
+        ARModel.transform.localScale = new Vector3(1,1,1);
+        Destroy(duplicate);
+        arCamera.gameObject.GetComponent<Camera>().enabled = true;
+        uiCamera.gameObject.GetComponent<Camera>().enabled = false;
+        synch = true;
+    }
+
+    public Transform getARTransform()
+    {
+        return ARModel.transform;
     }
 
     public IEnumerator move(GameObject model)

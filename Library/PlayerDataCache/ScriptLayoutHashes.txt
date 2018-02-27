@@ -69,7 +69,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TrackableSettings
 2e79757aa5219fe0dcbb3573ea3246d9 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.ScrollRectHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParseComputerVisionResponse
-1d6ba05e9f65a10f2afb5cc352f5f06b Assembly-CSharp.dll:.ZoomParts
+b4a23b93d205604ad243995839af4755 Assembly-CSharp.dll:.ZoomParts
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
