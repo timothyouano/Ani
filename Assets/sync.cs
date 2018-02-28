@@ -77,10 +77,10 @@ public class sync : MonoBehaviour {
     public void EnableARModel()
     {
         ARModel.transform.localScale = new Vector3(1,1,1);
-        Destroy(duplicate);
-        arCamera.gameObject.GetComponent<Camera>().enabled = true;
-        uiCamera.gameObject.GetComponent<Camera>().enabled = false;
+        arCamera.gameObject.GetComponent<Camera>().depth = 2;
+        uiCamera.gameObject.GetComponent<Camera>().depth = 1;
         synch = true;
+        //Destroy(duplicate);
     }
 
     public Transform getARTransform()

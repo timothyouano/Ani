@@ -62,8 +62,8 @@ public class ModelAllocator : MonoBehaviour {
         info1.GetComponent<Button>().onClick.AddListener(() => {
             _scene.valueSpeak = animal.info1;
             _scene.Speak();
-            GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
-            GameObject.Find("ARCamera").GetComponent<Camera>().enabled = false;
+            //GameObject.Find("Camera").GetComponent<Camera>().depth = true;
+            GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
             sync Synch = GameObject.Find("Synch").GetComponent<sync>();
             if (!Synch.isDuplicated())
             {
@@ -89,8 +89,8 @@ public class ModelAllocator : MonoBehaviour {
        info2.GetComponent<Button>().onClick.AddListener(() => {
             _scene.valueSpeak = animal.info2;
             _scene.Speak();
-           GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
-           GameObject.Find("ARCamera").GetComponent<Camera>().enabled = false;
+           //GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
+           GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
            sync Synch = GameObject.Find("Synch").GetComponent<sync>();
            if (!Synch.isDuplicated())
            {
@@ -117,8 +117,8 @@ public class ModelAllocator : MonoBehaviour {
        info3.GetComponent<Button>().onClick.AddListener(() => {
             _scene.valueSpeak = animal.info3;
             _scene.Speak();
-           GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
-           GameObject.Find("ARCamera").GetComponent<Camera>().enabled = false;
+           //GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
+           GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
            sync Synch = GameObject.Find("Synch").GetComponent<sync>();
            if (!Synch.isDuplicated())
            {
