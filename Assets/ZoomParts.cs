@@ -38,7 +38,10 @@ public class ZoomParts : MonoBehaviour {
 
     void Update()
     {
-        ARModelTransform = syncComponent.getARTransform();
+        if (syncComponent.synch)
+        {
+            ARModelTransform = syncComponent.getARTransform();
+        }
         if (part1) // If animal part info 1 is pressed
         {
             model = GameObject.Find("Model-duplicate").transform;

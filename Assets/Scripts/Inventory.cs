@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour {
                     DataManager.animalClicked = id;
                     AudioSource bgm = GameObject.Find("SceneManager").GetComponent<AudioSource>();
                     bgm.Stop();
-                    Debug.Log(DataManager.animalClicked + " sad");
+                    // Redirect To AR Screen
                     SceneManager.LoadScene("ARScreen");
                 });
                 animalObj.transform.position = Vector2.zero;

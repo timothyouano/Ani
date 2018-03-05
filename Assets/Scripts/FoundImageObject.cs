@@ -11,7 +11,6 @@ using UnityEngine.UI;
 public class FoundImageObject
 {
     public List<Category> categories { get; private set; }
-    public Text txt = GameObject.Find("Result").GetComponent<Text>();
 
     private GameObject loading = GameObject.Find("Loading");
 
@@ -53,8 +52,6 @@ public class FoundImageObject
                 max = e;
             }
         }
-        Debug.Log("Most Recognized Category: " + max.ToString());
-        txt.text = max.ToString();
         loading.SetActive(false);
         return max;
     }

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Find 5 Animals",
+    "type": "foundAnimals",
+    "requirement": 5
+  },
+  {
+    "id": 1,
+    "name": "Find 3 Land Animals",
+    "type": "landAnimals",
+    "requirement": 3
+  },
+  {
+    "id": 2,
+    "name": "Find 3 Flying Animals",
+    "type": "airAnimals",
+    "requirement": 3
+  },
+  {
+    "id": 3,
+    "name": "Answer 3 Questions",
+    "type": "answeredQuestion",
+    "requirement": 3
+  }
+]

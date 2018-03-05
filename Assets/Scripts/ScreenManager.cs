@@ -13,23 +13,8 @@ public class ScreenManager : MonoBehaviour {
     string currentScene;
     bool doneModify = false;
     bool menuSet = false;
+    bool fromAR = false;
     public static bool fromTutorial = false;
-    IEnumerator checkConnection()
-    {
-        string url = "https://google.com";
-        WWW www = new WWW(url);
-        yield return www;
-        if (www.isDone && www.bytesDownloaded > 0)
-        {
-            print("done");
-            SceneManager.LoadScene("Play");
-        }
-        if (www.isDone && www.bytesDownloaded == 0)
-        {
-            print("no connection");
-
-        }
-    }
 
     public void PlayButton()
     {
@@ -58,14 +43,16 @@ public class ScreenManager : MonoBehaviour {
     {
         // Note: Done modify helps to not go and assign again any button after every loop of an update, not putting doneModify wil make the app lag
         currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "Stash" && !doneModify)
+        if ((currentScene == "Stash" && !doneModify) || fromAR)
         {
+            Debug.Log("doneasdasd;las,d");
             exit = GameObject.Find("Exit").GetComponent<Button>();
             exit.onClick.AddListener(() => {
                 SceneManager.LoadScene("MainMenu");
                 menuSet = false;
             });
             doneModify = true;
+            fromAR = false;
         }
         else
         {
@@ -78,10 +65,17 @@ public class ScreenManager : MonoBehaviour {
             {
                 GameObject.Find("Play").GetComponent<Button>().onClick.AddListener(() => {
                     PlayButton();
+                    GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
                     doneModify = false;
                 });
                 GameObject.Find("StashBtn").GetComponent<Button>().onClick.AddListener(() => {
                     SceneManager.LoadScene("Stash");
+                    GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+                    doneModify = false;
+                });
+                GameObject.Find("AchievementBtn").GetComponent<Button>().onClick.AddListener(() => {
+                    SceneManager.LoadScene("Achievements");
+                    GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
                     doneModify = false;
                 });
                 GameObject.Find("SoundBtn").GetComponent<Button>().onClick.AddListener(() => {
@@ -102,6 +96,7 @@ public class ScreenManager : MonoBehaviour {
             menuSet = false;
             GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
                 returnToMenu();
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
             });
             doneModify = true;
         }
@@ -110,14 +105,34 @@ public class ScreenManager : MonoBehaviour {
             menuSet = false;
             GameObject.Find("BackButton").GetComponent<Button>().onClick.AddListener(() => {
                 returnToMenu();
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
             });
             doneModify = true;
         }
-        else if (currentScene == "FoundNewAnimal" && !doneModify)
+        else if (currentScene == "FoundNewAnimal" && !doneModify) // Found New Animal Screen
         {
             menuSet = false;
             GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
                 SceneManager.LoadScene("Stash");
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+            });
+            doneModify = true;
+        }
+        else if(currentScene == "ARScreen" && !doneModify) // AR Screen
+        {
+            menuSet = false;
+            GameObject.Find("TargetBuilderCanvas").transform.GetChild(8).GetChild(0).GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
+                SceneManager.LoadScene("Quiz");
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+                //doneModify = false;
+
+            });
+            GameObject.Find("TargetBuilderCanvas").transform.GetChild(8).GetChild(0).GetChild(1).GetComponent<Button>().onClick.AddListener(() => {
+                SceneManager.LoadScene("Stash");
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+                doneModify = false;
+                fromAR = true;
+
             });
             doneModify = true;
         }
@@ -128,6 +143,7 @@ public class ScreenManager : MonoBehaviour {
             if (currentScene == "Play")
             {
                 GameObject.Find("Image").GetComponent<CameraController>().Exit();
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
             }
             returnToMenu();
         }

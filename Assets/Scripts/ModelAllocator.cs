@@ -39,6 +39,9 @@ public class ModelAllocator : MonoBehaviour {
         model.SetActive(false);
         model.name = "Model";
 
+        // Set ScreenManager modified to false
+        GameObject.Find("SceneManager").GetComponent<ScreenManager>().setModify(false);
+
         infoPanel = GameObject.Find("TargetBuilderCanvas").transform.GetChild(5).gameObject;
         imagePanel = GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject;
     }

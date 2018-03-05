@@ -120,6 +120,11 @@ public class CameraController : MonoBehaviour {
         activeCameraTexture.Stop();
     }
 
+    public void StartCam()
+    {
+        activeCameraTexture.Play();
+    }
+
     IEnumerator TakePhoto()
     {
         // NOTE - you almost certainly have to do this here:

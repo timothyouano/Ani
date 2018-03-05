@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "animal_name": "Lion",
+    "answer1": "Tail",
+    "answer2": "Tail",
+    "answer3": "Tail",
+    "answer4": "Tail"
+  },
+  {
+    "id": 1,
+    "animal_name": "Panda",
+    "answer1": "Tail",
+    "answer2": "Tail",
+    "answer3": "Tail",
+    "answer4": "Tail"
+  },
+  {
+    "id": 2,
+    "animal_name": "Cat",
+    "answer1": "Head",
+    "answer2": "Tail",
+    "answer3": "Paws",
+    "answer4": "Eyes"
+  }
+]

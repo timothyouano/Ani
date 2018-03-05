@@ -15,7 +15,10 @@ Assets/Screens/Play.unity
 Assets/Screens/RequireInternetModal.unity
 Assets/Screens/FoundNewAnimal.unity
 Assets/Screens/ARScreen.unity
+Assets/Screens/Quiz.unity
+Assets/Achievements.unity
 SceneListEnd?
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuestionsDatabase
 5eb721946691e8ce6149678f86a20954 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Dialog
 df74704e4f42390de395067a89ea5fad Assembly-CSharp.dll:.CameraController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CoinsManager
@@ -31,6 +34,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AchievementsDatabase
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadingCircle
 5eb09977a6503450183b4e223250a7de Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SequenceCaller
 6aa15709f0c2d1158b12c889abbf4b5f Assembly-CSharp.dll:.ScreenManager
@@ -255,11 +259,13 @@ a2c7f8b593001c5dea9a482b721869e4 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Ani
 7d56c3f3186aa7c0b0a63612320f9141 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SpeakWrapper
 5e3bace7216de6104668602f35ab3ef6 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomColor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TutorialScreenSoundCheck
+aaa12a7acf32614ab38138b296a2926a Assembly-CSharp.dll:.Achievements
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 22b1c9e3760ce0520da21ce2ca684142 Assembly-CSharp.dll:.InitErrorHandler
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+7b6940ada1af1c44e404b362da97eaff Assembly-CSharp.dll:.AutoGridLayout
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AboutScreen
 ef65d26835ccbdcda7e45d9fae1a52a0 Assembly-CSharp.dll:.FrameQualityMeter
@@ -280,6 +286,7 @@ f660aaf65f58d1902fa8946d3661a010 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUI
 94c023ae6a3a715a380b0f81ff9db15f Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.FFTAnalyzer
 728e834925daefb3da27ee6aa844a671 Assembly-CSharp.dll:.ScaleImageOvertime
 1d6ba05e9f65a10f2afb5cc352f5f06b Assembly-CSharp.dll:.Test
+816342a8a473f07ced18fc867a3e4697 Assembly-CSharp.dll:.AnswerAllocator
 7b419e6f4f9e4c87f741e073e6fe5562 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIScenes
 55236d2ef995afe53d7b4cdf2d4c4352 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUISpeech
 3d05e921de5fdf58ebcc998827076153 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.PlatformEnabler

@@ -90,8 +90,11 @@
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\QualityDialog.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\UDTEventHandler.cs" />
      <Compile Include="Assets\SampleResources\UserDefinedTargets\Scripts\UDTSettings.cs" />
+     <Compile Include="Assets\Scripts\Achievements.cs" />
+     <Compile Include="Assets\Scripts\AchievementsDatabase.cs" />
      <Compile Include="Assets\Scripts\AnimalDatabase.cs" />
      <Compile Include="Assets\Scripts\AniVoice.cs" />
+     <Compile Include="Assets\Scripts\AnswerAllocator.cs" />
      <Compile Include="Assets\Scripts\BlinkingText.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraFocusController.cs" />
@@ -121,11 +124,13 @@
      <Compile Include="Assets\Scripts\MuteBtn.cs" />
      <Compile Include="Assets\Scripts\ParseComputerVisionResponse.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
+     <Compile Include="Assets\Scripts\QuestionsDatabase.cs" />
      <Compile Include="Assets\Scripts\ScaleImageOvertime.cs" />
      <Compile Include="Assets\Scripts\ScreenManager.cs" />
      <Compile Include="Assets\Scripts\ShowImageOnPanel.cs" />
      <Compile Include="Assets\Scripts\TutorialPager.cs" />
      <Compile Include="Assets\Scripts\TutorialScreenSoundCheck.cs" />
+     <Compile Include="Assets\Scripts\UI\AutoGridLayout.cs" />
      <Compile Include="Assets\sync.cs" />
      <Compile Include="Assets\Test.cs" />
      <Compile Include="Assets\Test2.cs" />
