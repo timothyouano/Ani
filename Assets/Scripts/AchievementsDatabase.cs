@@ -48,7 +48,7 @@ public class AchievementsDatabase : MonoBehaviour {
         Achievement achievement = null;
         for (int i = 0; i < database.Count; i++)
         {
-            if (name.Equals(database[i].name.ToLower()))
+            if (name.Equals(database[i].name))
             {
                 achievement = database[i];
                 break;
@@ -61,7 +61,7 @@ public class AchievementsDatabase : MonoBehaviour {
     {
         for (int i = 0; i < achievementData.Count; i++)
         {
-            database.Add(new Achievement((int)achievementData[i]["id"], achievementData[i]["name"].ToString(), achievementData[i]["type"].ToString(), (int)achievementData[i]["requirement"]));
+            database.Add(new Achievement((int)achievementData[i]["id"], achievementData[i]["name"].ToString(), achievementData[i]["type"].ToString(), (int)achievementData[i]["requirement"], (int)achievementData[i]["reward_gold"], (int)achievementData[i]["reward_exp"]));
         }
     }
 
@@ -78,17 +78,21 @@ public class Achievement
     public string name { get; set; }
     public string type { get; set; }
     public int requirement { get; set; }
+    public int reward_gold { get; set; }
+    public int reward_exp { get; set; }
 
     public Achievement()
     {
         this.id = -1;
     }
 
-    public Achievement(int id, string name, string type, int requirement)
+    public Achievement(int id, string name, string type, int requirement, int reward_gold, int reward_exp)
     {
         this.id = id;
         this.name = name;
         this.type = type;
         this.requirement = requirement;
+        this.reward_gold = reward_gold;
+        this.reward_exp = reward_exp;
     }
 }

@@ -54,10 +54,20 @@ public class Achievements : MonoBehaviour {
                 animalObj.transform.position = Vector2.zero;
                 animalObj.transform.GetChild(0).GetComponent<Text>().text = achievementToAdd.name;
                 animalObj.name = achievementToAdd.name;
+
                 int progress = (int)animalObj.transform.GetChild(1).GetComponent<RectTransform>().rect.width / achievementToAdd.requirement;
-                // Get how many animals
-                progress *= PlayerPrefs.GetInt(achievementToAdd.type);
+                int progressTxt;
                 // Set progress bar
+                if(achievementToAdd.requirement <= PlayerPrefs.GetInt(achievementToAdd.type))
+                {
+                    progress = (int)animalObj.transform.GetChild(1).GetComponent<RectTransform>().rect.width;
+                    progressTxt = achievementToAdd.requirement;
+                }
+                else
+                {
+                    progress *= PlayerPrefs.GetInt(achievementToAdd.type);
+                    progressTxt = PlayerPrefs.GetInt(achievementToAdd.type);
+                }
                 animalObj.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().offsetMin = new Vector2(progress, 0);
                 animalObj.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = PlayerPrefs.GetInt(achievementToAdd.type) + "/" + achievementToAdd.requirement;
                 break;

@@ -14,6 +14,7 @@ public class ModelAllocator : MonoBehaviour {
     public GameObject info1;
     public GameObject info2;
     public GameObject info3;
+    public GameObject ARButton;
 
     GameObject infoPanel;
     GameObject imagePanel;
@@ -63,9 +64,11 @@ public class ModelAllocator : MonoBehaviour {
         Debug.Log("ANIMAL NAME " + animal.name);
 
         info1.GetComponent<Button>().onClick.AddListener(() => {
+            // Enables Back to AR button
+            ARButton.SetActive(true);
+            // Sets Ani to speek info 1
             _scene.valueSpeak = animal.info1;
             _scene.Speak();
-            //GameObject.Find("Camera").GetComponent<Camera>().depth = true;
             GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
             sync Synch = GameObject.Find("Synch").GetComponent<sync>();
             if (!Synch.isDuplicated())
@@ -73,7 +76,7 @@ public class ModelAllocator : MonoBehaviour {
                 Synch.duplicateModel();
                 Synch.offSync();
             }
-
+            // Zooms to Part 1
             GameObject.Find("Synch").GetComponent<ZoomParts>().showPart1();
 
             if (!qualityMeterHidden)
@@ -90,9 +93,11 @@ public class ModelAllocator : MonoBehaviour {
         });
 
        info2.GetComponent<Button>().onClick.AddListener(() => {
-            _scene.valueSpeak = animal.info2;
+           // Enables Back to AR button
+           ARButton.SetActive(true);
+           // Sets Ani to speek info 1
+           _scene.valueSpeak = animal.info2;
             _scene.Speak();
-           //GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
            GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
            sync Synch = GameObject.Find("Synch").GetComponent<sync>();
            if (!Synch.isDuplicated())
@@ -100,7 +105,7 @@ public class ModelAllocator : MonoBehaviour {
                Synch.duplicateModel();
                Synch.offSync();
            }
-           
+           // Zooms to Part 2
            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart2();
            GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
 
@@ -118,9 +123,11 @@ public class ModelAllocator : MonoBehaviour {
        });
 
        info3.GetComponent<Button>().onClick.AddListener(() => {
-            _scene.valueSpeak = animal.info3;
+           // Enables Back to AR button
+           ARButton.SetActive(true);
+           // Sets Ani to speek info 1
+           _scene.valueSpeak = animal.info3;
             _scene.Speak();
-           //GameObject.Find("Camera").GetComponent<Camera>().enabled = true;
            GameObject.Find("ARCamera").GetComponent<Camera>().depth = 0;
            sync Synch = GameObject.Find("Synch").GetComponent<sync>();
            if (!Synch.isDuplicated())
@@ -128,7 +135,7 @@ public class ModelAllocator : MonoBehaviour {
                Synch.duplicateModel();
                Synch.offSync();
            }
-           
+           // Zooms to Part 3
            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart3();
            GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
 

@@ -16,7 +16,7 @@ Assets/Screens/RequireInternetModal.unity
 Assets/Screens/FoundNewAnimal.unity
 Assets/Screens/ARScreen.unity
 Assets/Screens/Quiz.unity
-Assets/Achievements.unity
+Assets/Screens/Achievements.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuestionsDatabase
 5eb721946691e8ce6149678f86a20954 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Dialog
@@ -255,7 +255,6 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QualityDialog
 a2c7f8b593001c5dea9a482b721869e4 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.AniVoice
-2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.Follow
 7d56c3f3186aa7c0b0a63612320f9141 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.SpeakWrapper
 5e3bace7216de6104668602f35ab3ef6 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomColor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TutorialScreenSoundCheck
@@ -274,7 +273,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-052030d5ec2bbe1c3a4882d7d03c9ee7 Assembly-CSharp.dll:.ModelAllocator
+3b4531a980f767e37a26665f8f327946 Assembly-CSharp.dll:.ModelAllocator
 583bbde4025ee38b38121c707145fa87 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIMultiAudioFilter
 1f9c77b4de624943d85ebe0b45c9058b Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomRotator
 fcb764e9d8567daa2c8ced5bdeb8dc5a Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.AudioVisualizer
@@ -285,8 +284,7 @@ da94b08a88eaf777635fd5010f2d29b5 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Pre
 f660aaf65f58d1902fa8946d3661a010 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIAudioFilter
 94c023ae6a3a715a380b0f81ff9db15f Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.FFTAnalyzer
 728e834925daefb3da27ee6aa844a671 Assembly-CSharp.dll:.ScaleImageOvertime
-1d6ba05e9f65a10f2afb5cc352f5f06b Assembly-CSharp.dll:.Test
-816342a8a473f07ced18fc867a3e4697 Assembly-CSharp.dll:.AnswerAllocator
+86971917b80ee09f082c25ee35231edd Assembly-CSharp.dll:.AnswerAllocator
 7b419e6f4f9e4c87f741e073e6fe5562 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIScenes
 55236d2ef995afe53d7b4cdf2d4c4352 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUISpeech
 3d05e921de5fdf58ebcc998827076153 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.PlatformEnabler
@@ -370,4 +368,3 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Test2

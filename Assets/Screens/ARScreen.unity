@@ -321,6 +321,7 @@ MonoBehaviour:
   info1: {fileID: 1103369693}
   info2: {fileID: 1584153147}
   info3: {fileID: 1858849861}
+  ARButton: {fileID: 2138814440}
 --- !u!4 &130080893
 Transform:
   m_ObjectHideFlags: 0
@@ -5060,7 +5061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2138814441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5075,10 +5076,10 @@ RectTransform:
   m_Father: {fileID: 32431291}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -95}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138814442
 MonoBehaviour:
@@ -5122,6 +5123,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1571686849}
         m_MethodName: activateARModel
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2138814440}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

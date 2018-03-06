@@ -45,7 +45,6 @@ public class ScreenManager : MonoBehaviour {
         currentScene = SceneManager.GetActiveScene().name;
         if ((currentScene == "Stash" && !doneModify) || fromAR)
         {
-            Debug.Log("doneasdasd;las,d");
             exit = GameObject.Find("Exit").GetComponent<Button>();
             exit.onClick.AddListener(() => {
                 SceneManager.LoadScene("MainMenu");
@@ -133,6 +132,15 @@ public class ScreenManager : MonoBehaviour {
                 doneModify = false;
                 fromAR = true;
 
+            });
+            doneModify = true;
+        }
+        else if (currentScene == "Achievements" && !doneModify) // AR Screen
+        {
+            menuSet = false;
+            GameObject.Find("Exit").GetComponent<Button>().onClick.AddListener(() => {
+                SceneManager.LoadScene("MainMenu");
+                menuSet = false;
             });
             doneModify = true;
         }
