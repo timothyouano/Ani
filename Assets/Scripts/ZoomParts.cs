@@ -19,6 +19,13 @@ public class ZoomParts : MonoBehaviour {
     Transform model;
     Vector3 pointToLook;
 
+    Vector3 part1_vector;
+    Vector3 part2_vector;
+    Vector3 part3_vector;
+    Vector3 part1_rotation;
+    Vector3 part2_rotation;
+    Vector3 part3_rotation;
+
     Transform ARModelTransform;
 
     float offset = -0.15f;
@@ -51,11 +58,11 @@ public class ZoomParts : MonoBehaviour {
             if (startZoom)
             {
                 stopperIn += Time.deltaTime;
-                targetpos = model.position - new Vector3(-0.6f, -1f, 0);
+                targetpos = model.position - part1_vector;
                 // zoom to model
                 camera.transform.position = Vector3.Lerp(camera.transform.position, targetpos, stopperIn);
                 // Rotate the model to look at camera
-                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(0,-90f,0), stopperIn);
+                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(part1_rotation), stopperIn);
             }
             else
             {
@@ -86,11 +93,11 @@ public class ZoomParts : MonoBehaviour {
             if (startZoom)
             {
                 stopperIn += Time.deltaTime;
-                targetpos = model.position - new Vector3(-0.6f, -1f, 0);
+                targetpos = model.position - part2_vector;
                 // zoom to model
                 camera.transform.position = Vector3.Lerp(camera.transform.position, targetpos, stopperIn);
                 // Rotate the model to look at camera
-                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(0, 90f, 0), stopperIn);
+                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(part2_rotation), stopperIn);
             }
             else
             {
@@ -122,11 +129,11 @@ public class ZoomParts : MonoBehaviour {
             if (startZoom)
             {
                 stopperIn += Time.deltaTime;
-                targetpos = model.position - new Vector3(-0.6f, 0.2f, 0);
+                targetpos = model.position - part3_vector;
                 // zoom to model
                 camera.transform.position = Vector3.Lerp(camera.transform.position, targetpos, stopperIn);
                 // Rotate the model to look at camera
-                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(0, -90f, 0), stopperIn);
+                model.rotation = Quaternion.Slerp(model.transform.rotation, camera.transform.rotation * Quaternion.Euler(part3_rotation), stopperIn);
             }
             else
             {
@@ -222,18 +229,24 @@ public class ZoomParts : MonoBehaviour {
         }
     }
 
-    public void showPart1()
+    public void showPart1(float[] part1_vector, float[] part1_rotation)
     {
+        this.part1_vector = new Vector3(part1_vector[0], part1_vector[1], part1_vector[2]);
+        this.part1_rotation = new Vector3(part1_rotation[0], part1_rotation[1], part1_rotation[2]);
         part1 = true;
     }
 
-    public void showPart2()
+    public void showPart2(float[] part2_vector, float[] part2_rotation)
     {
+        this.part2_vector = new Vector3(part2_vector[0], part2_vector[1], part2_vector[2]);
+        this.part2_rotation = new Vector3(part2_rotation[0], part2_rotation[1], part2_rotation[2]);
         part2 = true;
     }
 
-    public void showPart3()
+    public void showPart3(float[] part3_vector, float[] part3_rotation)
     {
+        this.part3_vector = new Vector3(part3_vector[0], part3_vector[1], part3_vector[2]);
+        this.part3_rotation = new Vector3(part3_rotation[0], part3_rotation[1], part3_rotation[2]);
         part3 = true;
     }
 

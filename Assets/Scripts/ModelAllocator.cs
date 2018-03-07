@@ -21,6 +21,13 @@ public class ModelAllocator : MonoBehaviour {
 
     bool qualityMeterHidden = false;
 
+    float[] part1_vector = new float[3];
+    float[] part2_vector = new float[3];
+    float[] part3_vector = new float[3];
+    float[] part1_rotation = new float[3];
+    float[] part2_rotation = new float[3];
+    float[] part3_rotation = new float[3];
+
     Crosstales.RTVoice.Demo.AniVoice _scene;
 
     // Use this for initialization
@@ -34,11 +41,32 @@ public class ModelAllocator : MonoBehaviour {
         Debug.Log(animal.id);
         model = Instantiate((GameObject)Resources.Load("Prefab/Models" + animal.modelPath));
         model.transform.SetParent(GameObject.Find("UserDefinedTarget").transform);
-        model.transform.localScale = new Vector3(0.01F,0.01F,0.01F);
+        model.transform.localScale = new Vector3(animal.scale, animal.scale, animal.scale);
         model.transform.position = Vector2.zero;
-        model.transform.rotation = new Quaternion(0,-90F,0,0);
+        model.transform.rotation = new Quaternion(0, animal.rotation, 0, 0);
         model.SetActive(false);
         model.name = "Model";
+
+        // Vectors
+        string[] splitted1 = animal.part1_vector.Split(',');
+        string[] splitted2 = animal.part2_vector.Split(',');
+        string[] splitted3 = animal.part3_vector.Split(',');
+        // Rotations
+        string[] splittedrot1 = animal.part1_rotation.Split(',');
+        string[] splittedrot2 = animal.part2_rotation.Split(',');
+        string[] splittedrot3 = animal.part3_rotation.Split(',');
+
+        for (int i = 0; i < 3; i++)
+        {
+            part1_vector[i] = float.Parse(splitted1[i]);
+            part2_vector[i] = float.Parse(splitted2[i]);
+            part3_vector[i] = float.Parse(splitted3[i]);
+            part1_rotation[i] = float.Parse(splittedrot1[i]);
+            part2_rotation[i] = float.Parse(splittedrot2[i]);
+            part3_rotation[i] = float.Parse(splittedrot3[i]);
+        }
+        
+        
 
         // Set ScreenManager modified to false
         GameObject.Find("SceneManager").GetComponent<ScreenManager>().setModify(false);
@@ -77,7 +105,7 @@ public class ModelAllocator : MonoBehaviour {
                 Synch.offSync();
             }
             // Zooms to Part 1
-            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart1();
+            GameObject.Find("Synch").GetComponent<ZoomParts>().showPart1(part1_vector,part1_rotation);
 
             if (!qualityMeterHidden)
             {
@@ -106,7 +134,7 @@ public class ModelAllocator : MonoBehaviour {
                Synch.offSync();
            }
            // Zooms to Part 2
-           GameObject.Find("Synch").GetComponent<ZoomParts>().showPart2();
+           GameObject.Find("Synch").GetComponent<ZoomParts>().showPart2(part2_vector, part2_rotation);
            GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
 
            if (!qualityMeterHidden)
@@ -136,7 +164,7 @@ public class ModelAllocator : MonoBehaviour {
                Synch.offSync();
            }
            // Zooms to Part 3
-           GameObject.Find("Synch").GetComponent<ZoomParts>().showPart3();
+           GameObject.Find("Synch").GetComponent<ZoomParts>().showPart3(part3_vector, part3_rotation);
            GameObject.Find("TargetBuilderCanvas").transform.GetChild(6).gameObject.SetActive(true);
 
            if (!qualityMeterHidden)

@@ -79,6 +79,7 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
             {
                 int[] animals = PlayerPrefsX.GetIntArray("AnimalsAquired");
                 int[] dummy = new int[animals.Length + 1];
+                Debug.Log("-- " + animal.id + " " + database.FetchAnimalByID(animal.id));
                 for (int i = 0; i < animals.Length; i++)
                 {
                     dummy[i] = animals[i];
