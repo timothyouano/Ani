@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class ImageToComputerVisionAPI : MonoBehaviour {
 
-    string VISIONKEY = "f477fa9f646842279aa8dbf02ec6075b"; // replace with your Computer Vision API Key
+    string VISIONKEY = "52e907f7a4c04eedb54a117ed5765ad6"; // replace with your Computer Vision API Key
 
     string emotionURL = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/tag";
 
@@ -17,6 +17,8 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
     string responseData;
     AnimalDatabase database;
     CameraController cam;
+
+    bool showNoFoundPanel = true;
 
     // Use this for initialization
     void Start () {
@@ -96,17 +98,24 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
                     sManager.setModify(false);
                     // Off camera
                     cam.Exit();
+                    showNoFoundPanel = false;
                     // Redirect to FoundNewAnimal Screen
                     SceneManager.LoadScene("FoundNewAnimal");
                 }
                 else
                 {
+                    showNoFoundPanel = false;
                     StartCoroutine(activateDuplicatePanel());
                 }
                 break;
             }
-            Debug.Log("Category = " + cat.name);
         }
+
+        if (showNoFoundPanel)
+        {
+            StartCoroutine(activateNoFoundPanel());
+        }
+
     }
 
     // Shows error message then closes after 3 sescond
@@ -117,7 +126,15 @@ public class ImageToComputerVisionAPI : MonoBehaviour {
         GameObject.Find("Canvas").transform.GetChild(4).gameObject.SetActive(false);
         cam.StartCam();
     }
-    
+
+    IEnumerator activateNoFoundPanel()
+    {
+        GameObject.Find("Canvas").transform.GetChild(5).gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        GameObject.Find("Canvas").transform.GetChild(5).gameObject.SetActive(false);
+        cam.StartCam();
+    }
+
     // Checks if user already has that animal
     public bool contains(int[] animals, int animalFind)
     {

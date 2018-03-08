@@ -216,7 +216,7 @@ public class ZoomParts : MonoBehaviour {
                 // If fading out animation is active and reached 0.3 seconds
                 model.localScale = new Vector3(0, 0, 0);
             }
-            if (fadeOut >= 0.5)
+            if (fadeOut >= 0.4)
             {
                 // If fading out animation is active and reached 1 second
                 fader.SetActive(false);

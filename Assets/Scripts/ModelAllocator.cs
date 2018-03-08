@@ -42,8 +42,9 @@ public class ModelAllocator : MonoBehaviour {
         model = Instantiate((GameObject)Resources.Load("Prefab/Models" + animal.modelPath));
         model.transform.SetParent(GameObject.Find("UserDefinedTarget").transform);
         model.transform.localScale = new Vector3(animal.scale, animal.scale, animal.scale);
-        model.transform.position = Vector2.zero;
-        model.transform.rotation = new Quaternion(0, animal.rotation, 0, 0);
+        model.transform.position = Vector3.zero;
+        //model.transform.rotation = new Quaternion(0, animal.rotation, 0, 0);
+        model.transform.Rotate(0, animal.rotation, 0);
         model.SetActive(false);
         model.name = "Model";
 
