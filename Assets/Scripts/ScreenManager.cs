@@ -14,6 +14,7 @@ public class ScreenManager : MonoBehaviour {
     bool doneModify = false;
     bool menuSet = false;
     bool fromAR = false;
+    bool boughtAnimal = false;
     public static bool fromTutorial = false;
 
     public void PlayButton()
@@ -145,6 +146,17 @@ public class ScreenManager : MonoBehaviour {
             doneModify = true;
         }
 
+        if (currentScene == "FoundNewAnimal" && boughtAnimal)
+        {
+            menuSet = false;
+            GameObject.Find("TapListener").GetComponent<Button>().onClick.AddListener(() => {
+                SceneManager.LoadScene("Stash");
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+            });
+            doneModify = true;
+            boughtAnimal = false;
+        }
+
         // If back button on android is pressed then go back to Main Menu
         if (Input.GetKeyDown(KeyCode.Escape)){
             menuSet = false;
@@ -152,14 +164,29 @@ public class ScreenManager : MonoBehaviour {
             {
                 GameObject.Find("Image").GetComponent<CameraController>().Exit();
                 GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
+                returnToMenu();
             }
-            returnToMenu();
+            else if( currentScene == "ARScreen")
+            {
+                GameObject.Find("TargetBuilderCanvas").transform.GetChild(8).gameObject.SetActive(true);
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().valueSpeak = "Before you go, would you mind answering a question for gold coins and experience?";
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Play();
+            }
+            else
+            {
+                returnToMenu();
+            }
         }
     }
 
     public void setModify(bool val)
     {
         this.doneModify = val;
+    }
+
+    public void setBought(bool val)
+    {
+        this.boughtAnimal = val;
     }
 
     public void tapSound()

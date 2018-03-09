@@ -22,5 +22,29 @@
     "answer2": "Tail",
     "answer3": "Paws",
     "answer4": "Eyes"
+  },
+  {
+    "id": 3,
+    "animal_name": "Bird",
+    "answer1": "Head",
+    "answer2": "Tail",
+    "answer3": "Wings",
+    "answer4": "Claw"
+  },
+  {
+    "id": 4,
+    "animal_name": "Tiger",
+    "answer1": "Head",
+    "answer2": "Fur & Legs",
+    "answer3": "Paw & Claws",
+    "answer4": "Tail"
+  },
+  {
+    "id": 5,
+    "animal_name": "Elephant",
+    "answer1": "Head",
+    "answer2": "Tail",
+    "answer3": "Paws",
+    "answer4": "Eyes"
   }
 ]

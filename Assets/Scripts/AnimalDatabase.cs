@@ -30,7 +30,7 @@ public class AnimalDatabase : MonoBehaviour {
 
     public Animal FetchAnimalByID(int id)
     {
-        Animal animal = new Animal();
+        Animal animal = null;
         for(int i = 0; i < database.Count; i++)
         {
             if(id == (int)database[i].id)
@@ -54,6 +54,11 @@ public class AnimalDatabase : MonoBehaviour {
             }
         }
         return animal;
+    }
+
+    public int Count()
+    {
+        return database.Count;
     }
 
     void ConstructAnimalDatabase() {
@@ -85,7 +90,7 @@ public class Animal{
     public string type { get; set; }
 
     public Animal() {
-        this.id = -1;
+        this.id = -999;
     }
 
     public Animal(int id, string name, float scale, float rotation, string part1_vector, string part2_vector, string part3_vector, string part1_rotation, string part2_rotation, string part3_rotation, string modelPath, string intro,string info1, string info2, string info3, string type)
