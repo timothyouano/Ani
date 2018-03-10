@@ -95,6 +95,11 @@ namespace Crosstales.RTVoice.Demo
             TextSpeakerB.text = textB;
         }
 
+        public void setValueSpeak(string valueSpeak)
+        {
+            this.valueSpeak = valueSpeak;
+        }
+
         #endregion
 
 

@@ -36,7 +36,7 @@ public class AnswerAllocator : MonoBehaviour {
 
         int rand = 0;
         int correctAnswer = srand.Next(1,4); // change this
-        Question question = database.FetchQuestionByID(2);
+        Question question = database.FetchQuestionByID(DataManager.animalClicked);
 
         answerText[0] = question.answer1;
         answerText[1] = question.answer2;
@@ -60,6 +60,10 @@ public class AnswerAllocator : MonoBehaviour {
                         Achievement answeredAchievement = aDatabase.FetchAchievementByName("Answer 3 Questions");
                         // Get user Achievements
                         bool[] userAchievements = PlayerPrefsX.GetBoolArray("userAchievements");
+                        if(userAchievements.Length == 0)
+                        {
+                            userAchievements = new bool[aDatabase.getCount()];
+                        }
                         if (answeredAchievement.requirement <= PlayerPrefs.GetInt("answeredQuestion") && !userAchievements[answeredAchievement.id])
                         {
                             PlayerPrefs.SetInt("goldcoins", PlayerPrefs.GetInt("goldcoins") + answeredAchievement.reward_gold);
@@ -116,7 +120,6 @@ public class AnswerAllocator : MonoBehaviour {
         });
 
         questionImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + question.animal_name + "/" + correctAnswer);
-        questionImage.GetComponent<Image>().preserveAspect = true;
     }
 	
 	// Update is called once per frame

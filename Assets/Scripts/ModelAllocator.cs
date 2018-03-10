@@ -118,7 +118,7 @@ public class ModelAllocator : MonoBehaviour {
             infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info1;
 
             imagePanel.SetActive(true);
-            imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/1");
+            imagePanel.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/1");
         });
 
        info2.GetComponent<Button>().onClick.AddListener(() => {
@@ -148,7 +148,7 @@ public class ModelAllocator : MonoBehaviour {
            infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info2;
 
            imagePanel.SetActive(true);
-           imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/2");
+           imagePanel.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/2");
        });
 
        info3.GetComponent<Button>().onClick.AddListener(() => {
@@ -178,7 +178,7 @@ public class ModelAllocator : MonoBehaviour {
            infoPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = animal.info3;
 
            imagePanel.SetActive(true);
-           imagePanel.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/3");
+           imagePanel.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprite/AnimalInfoImage/" + animal.name + "/3");
 
        });
     }

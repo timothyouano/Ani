@@ -169,8 +169,8 @@ public class ScreenManager : MonoBehaviour {
             else if( currentScene == "ARScreen")
             {
                 GameObject.Find("TargetBuilderCanvas").transform.GetChild(8).gameObject.SetActive(true);
-                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().valueSpeak = "Before you go, would you mind answering a question for gold coins and experience?";
-                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Play();
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().setValueSpeak("Before you go, would you mind answering a question for gold coins and experience?");
+                GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Speak();
             }
             else
             {

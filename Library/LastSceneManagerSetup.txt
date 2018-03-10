@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Screens/MainMenu.unity
+- path: Assets/Screens/Achievements.unity
   isLoaded: 1
   isActive: 1

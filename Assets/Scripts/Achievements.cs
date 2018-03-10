@@ -69,7 +69,7 @@ public class Achievements : MonoBehaviour {
                     progressTxt = PlayerPrefs.GetInt(achievementToAdd.type);
                 }
                 animalObj.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().offsetMin = new Vector2(progress, 0);
-                animalObj.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = PlayerPrefs.GetInt(achievementToAdd.type) + "/" + achievementToAdd.requirement;
+                animalObj.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = progressTxt + "/" + achievementToAdd.requirement;
                 break;
             }
         }

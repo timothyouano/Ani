@@ -1382,6 +1382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139950841}
   - component: {fileID: 1139950843}
+  - component: {fileID: 1139950844}
   - component: {fileID: 1139950842}
   m_Layer: 5
   m_Name: Text
@@ -1447,6 +1448,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1139950840}
+--- !u!114 &1139950844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139950840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14568294f8a6a6148ad59c30684b799d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1177678924
 GameObject:
   m_ObjectHideFlags: 0
