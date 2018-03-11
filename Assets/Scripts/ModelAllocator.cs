@@ -15,6 +15,7 @@ public class ModelAllocator : MonoBehaviour {
     public GameObject info2;
     public GameObject info3;
     public GameObject ARButton;
+    public GameObject animalName;
 
     GameObject infoPanel;
     GameObject imagePanel;
@@ -43,10 +44,21 @@ public class ModelAllocator : MonoBehaviour {
         model.transform.SetParent(GameObject.Find("UserDefinedTarget").transform);
         model.transform.localScale = new Vector3(animal.scale, animal.scale, animal.scale);
         model.transform.position = Vector3.zero;
-        //model.transform.rotation = new Quaternion(0, animal.rotation, 0, 0);
         model.transform.Rotate(0, animal.rotation, 0);
         model.SetActive(false);
         model.name = "Model";
+
+        /*
+
+        // Instantiate Animation deleted after 2 seconds in the UDTEventHandler script
+        GameObject mod = Instantiate((GameObject)Resources.Load("Prefab/Summon/SummonGround"));
+        mod.transform.parent = model.transform;
+        mod.transform.localScale = new Vector3(1F, 1F, 1F);
+
+        */
+
+        // Set Animal's name
+        animalName.GetComponent<Text>().text = animal.name;
 
         // Vectors
         string[] splitted1 = animal.part1_vector.Split(',');

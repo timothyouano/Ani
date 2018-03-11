@@ -231,6 +231,7 @@ public class ZoomParts : MonoBehaviour {
 
     public void showPart1(float[] part1_vector, float[] part1_rotation)
     {
+        gameObject.GetComponent<sync>().syncCams();
         this.part1_vector = new Vector3(part1_vector[0], part1_vector[1], part1_vector[2]);
         this.part1_rotation = new Vector3(part1_rotation[0], part1_rotation[1], part1_rotation[2]);
         part1 = true;
@@ -238,6 +239,7 @@ public class ZoomParts : MonoBehaviour {
 
     public void showPart2(float[] part2_vector, float[] part2_rotation)
     {
+        gameObject.GetComponent<sync>().syncCams();
         this.part2_vector = new Vector3(part2_vector[0], part2_vector[1], part2_vector[2]);
         this.part2_rotation = new Vector3(part2_rotation[0], part2_rotation[1], part2_rotation[2]);
         part2 = true;
@@ -245,6 +247,7 @@ public class ZoomParts : MonoBehaviour {
 
     public void showPart3(float[] part3_vector, float[] part3_rotation)
     {
+        gameObject.GetComponent<sync>().syncCams();
         this.part3_vector = new Vector3(part3_vector[0], part3_vector[1], part3_vector[2]);
         this.part3_rotation = new Vector3(part3_rotation[0], part3_rotation[1], part3_rotation[2]);
         part3 = true;

@@ -273,7 +273,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-3b4531a980f767e37a26665f8f327946 Assembly-CSharp.dll:.ModelAllocator
+7609fe7962e13a3e145812fe7b657621 Assembly-CSharp.dll:.ModelAllocator
 583bbde4025ee38b38121c707145fa87 Assembly-CSharp.dll:Crosstales.RTVoice.Demo.GUIMultiAudioFilter
 1f9c77b4de624943d85ebe0b45c9058b Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.RandomRotator
 fcb764e9d8567daa2c8ced5bdeb8dc5a Assembly-CSharp.dll:Crosstales.RTVoice.Demo.Util.AudioVisualizer

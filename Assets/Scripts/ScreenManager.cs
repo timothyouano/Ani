@@ -177,6 +177,12 @@ public class ScreenManager : MonoBehaviour {
                 returnToMenu();
             }
         }
+
+    }
+
+    void OnApplicationPause(bool pauseStatus)
+    {
+        GameObject.Find("_Scene").GetComponent<Crosstales.RTVoice.Demo.AniVoice>().Stop();
     }
 
     public void setModify(bool val)

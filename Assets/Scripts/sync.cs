@@ -20,6 +20,7 @@ public class sync : MonoBehaviour {
 
     void Update()
     {
+        /*
         if (!synch)
         {
             uiCamera.projectionMatrix = arCamera.projectionMatrix;
@@ -29,6 +30,7 @@ public class sync : MonoBehaviour {
             uiCamera.farClipPlane = arCamera.farClipPlane;
             uiCamera.nearClipPlane = arCamera.nearClipPlane;
         }
+        */
     }
 
     public void offSync()
@@ -39,6 +41,16 @@ public class sync : MonoBehaviour {
     public void onSync()
     {
         this.synch = false;
+    }
+
+    public void syncCams()
+    {
+        uiCamera.projectionMatrix = arCamera.projectionMatrix;
+        uiCamera.transform.position = arCamera.transform.position;
+        uiCamera.transform.rotation = arCamera.transform.rotation;
+        uiCamera.fieldOfView = arCamera.fieldOfView;
+        uiCamera.farClipPlane = arCamera.farClipPlane;
+        uiCamera.nearClipPlane = arCamera.nearClipPlane;
     }
 
     public bool isDuplicated()

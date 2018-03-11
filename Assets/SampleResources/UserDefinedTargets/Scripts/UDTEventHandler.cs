@@ -9,6 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Vuforia;
+using UnityEngine.UI;
 
 public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
 {
@@ -162,17 +163,22 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
         if (m_FrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_MEDIUM ||
             m_FrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH)
         {
+            // Enable Model
+            GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().enable();
             // create the name of the next target.
             // the TrackableName of the original, linked ImageTargetBehaviour is extended with a continuous number to ensure unique names
             string targetName = string.Format("{0}-{1}", ImageTargetTemplate.TrackableName, m_TargetCounter);
 
             // generate a new target:
             m_TargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
+            GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().disable();
 
             // Disable creating new target
             GameObject.Find("BuildPanel").SetActive(false);
             GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().activateInfoSpeak();
             GameObject.Find("ModelAllocator").GetComponent<ModelAllocator>().speakIntro();
+            // Animate Ground
+            StartCoroutine(summonAnim());
         }
         else
         {
@@ -184,6 +190,27 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
                 StartCoroutine(FadeOutQualityDialog());
             }
         }
+    }
+
+    IEnumerator summonAnim()
+    {
+        // Animal Name change and start animating
+        int maxAlpha = 255;
+        GameObject animalName = GameObject.Find("TargetBuilderCanvas").transform.GetChild(9).gameObject;
+        animalName.SetActive(true);
+        while (animalName.GetComponent<Text>().color.a < 1.0f)
+        {
+            animalName.GetComponent<Text>().color += new Color(0,0,0, Time.deltaTime * 3);
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(2);
+        while (animalName.GetComponent<Text>().color.a > 0.0f)
+        {
+            animalName.GetComponent<Text>().color -= new Color(0, 0, 0, Time.deltaTime * 3);
+            Debug.Log("a -- " + animalName.GetComponent<Text>().color.a);
+            yield return new WaitForSeconds(0.05f);
+        }
+        // Destroy(GameObject.Find("SummonGround(Clone)"));
     }
 
     #endregion //PUBLIC_METHODS
