@@ -80,7 +80,7 @@
     "part2_vector": "-2,-1,0",
     "part3_vector": "-1,0.2,0",
     "part1_rotation": "0,90,0",
-    "part2_rotation": "0,90,0",
+    "part2_rotation": "0,180,0",
     "part3_rotation":  "0,180,0",
     "modelpath": "/Elephant/Elephant",
     "introduction": "The elephant is the largest land animals on Earth. They have characteristic long nose or trunks, large floppy ears, and wide thick legs. The elephant’s skin helps to disperse an elephant’s body heat, cooling the animal. Elephants have evolved many folds in their skin layers, giving them their baggy and wrinkled appearance.",
